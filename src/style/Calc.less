@@ -9,17 +9,26 @@
 }
 
 .DisplayContainer {
-  display: grid;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-size: 24px;
+  font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+  text-align: right;
+  font-size: 30px;
   border-bottom: 1px solid #eee;
+  padding-right: 10px;
+  line-height: 70px;
+
+  .input-char {
+    vertical-align: baseline;
+    text-align: center;
+    display: inline-block;
+    width: 20px;
+    line-height: 27px;
+  }
 }
 
 .ButtonsContainer {
   display: grid;
-  grid-template-columns: 70px 70px 70px 70px;
-  grid-template-rows: 70px 70px 70px 70px 70px;
+  grid-auto-columns: 70px;
+  grid-auto-rows: 70px;
   grid-template-areas:
   "clear toggleNegative percentage divide"
   "seven eight nine multiply"

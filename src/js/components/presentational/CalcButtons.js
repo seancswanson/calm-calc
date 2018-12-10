@@ -7,29 +7,29 @@ const Buttons = ({handleDigitClick, handleOperationClick, handleClearClick, hand
   return(
     <div className="ButtonsContainer">
 
-    <Button label="A/C" value="clear" key="clear" handleButtonClick={handleClearClick} />
-    <Button label="+/-" value="toggleNegative" key="toggleNegative" handleButtonClick={handleOperationClick} />
-    <Button label="%" value="%" key="percentage" handleButtonClick={handleOperationClick} />
-    <Button label="/" value="/" key="divide" handleButtonClick={handleOperationClick} />
+    <Button label="A/C" value="clear" dataId="clear" handleButtonClick={handleClearClick} />
+    <Button label="+/-" value="toggleNegative" dataId="toggleNegative" handleButtonClick={handleOperationClick} />
+    <Button label="%" value="%" dataId="percentage" handleButtonClick={handleOperationClick} />
+    <Button label="/" value="/" dataId="divide" handleButtonClick={handleOperationClick} />
 
-    <Button label="7" value="7" key="seven" handleButtonClick={handleDigitClick} />
-    <Button label="8" value="8" key="eight" handleButtonClick={handleDigitClick} />
-    <Button label="9" value="9" key="nine" handleButtonClick={handleDigitClick} />
-    <Button label="×" value="*" key="multiply" handleButtonClick={handleOperationClick} />
+    <Button label="7" value="7" dataId="seven" handleButtonClick={handleDigitClick} />
+    <Button label="8" value="8" dataId="eight" handleButtonClick={handleDigitClick} />
+    <Button label="9" value="9" dataId="nine" handleButtonClick={handleDigitClick} />
+    <Button label="×" value="*" dataId="multiply" handleButtonClick={handleOperationClick} />
 
-    <Button label="4" value="4" key="four" handleButtonClick={handleDigitClick} />
-    <Button label="5" value="5" key="five" handleButtonClick={handleDigitClick} />
-    <Button label="6" value="6" key="six" handleButtonClick={handleDigitClick} />
-    <Button label="-" value="-" key="subtract" handleButtonClick={handleOperationClick} />
+    <Button label="4" value="4" dataId="four" handleButtonClick={handleDigitClick} />
+    <Button label="5" value="5" dataId="five" handleButtonClick={handleDigitClick} />
+    <Button label="6" value="6" dataId="six" handleButtonClick={handleDigitClick} />
+    <Button label="-" value="-" dataId="subtract" handleButtonClick={handleOperationClick} />
 
-    <Button label="1" value="1" key="one" handleButtonClick={handleDigitClick} />
-    <Button label="2" value="2" key="two" handleButtonClick={handleDigitClick} />
-    <Button label="3" value="3" key="three" handleButtonClick={handleDigitClick} />
-    <Button label="+" value="+" key="add" handleButtonClick={handleOperationClick} />
+    <Button label="1" value="1" dataId="one" handleButtonClick={handleDigitClick} />
+    <Button label="2" value="2" dataId="two" handleButtonClick={handleDigitClick} />
+    <Button label="3" value="3" dataId="three" handleButtonClick={handleDigitClick} />
+    <Button label="+" value="+" dataId="add" handleButtonClick={handleOperationClick} />
 
-    <Button label="0" value="0" key="zero" handleButtonClick={handleDigitClick} />
-    <Button label="." value="." key="decimal" handleButtonClick={handleDigitClick} />
-    <Button label="=" value="=" key="evaluate" handleButtonClick={handleEvaluateClick} />
+    <Button label="0" value="0" dataId="zero" handleButtonClick={handleDigitClick} />
+    <Button label="." value="." dataId="decimal" handleButtonClick={handleDigitClick} />
+    <Button label="=" value="=" dataId="evaluate" handleButtonClick={handleEvaluateClick} />
     </div>
 )
 };

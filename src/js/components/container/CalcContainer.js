@@ -21,33 +21,37 @@ class CalcContainer extends Component {
   };
 
   handleDigitClick(event) {
-    console.log(event.target);
+    let newDigit = event.target.value;
     this.setState({
-      lastPressed: event.target.value
-    }, () => console.log(this.state));
+      operations: this.state.operations.concat(newDigit)
+    }, () => console.log(this.state.operations));
   }
 
   handleClearClick(event) {
-    console.log(event.target);
     this.setState({
-      lastPressed: event.target.value
-    }, () => console.log(this.state));
+      operations: []
+    });
   }
 
   handleOperationClick(event) {
-    console.log(event.target);
-    this.setState({
-      lastPressed: event.target.value
-    }, () => console.log(this.state));
+    let newOperation = event.target.value;
+    if (isNaN(newOperation) && isNaN(this.state.operations[this.state.operations.length - 1])) {
+      this.setState({
+        operations: this.state.operations
+      });
+    } else {
+      this.setState({
+        operations: this.state.operations.concat(newOperation)
+      }, () => console.log(this.state.operations));
+    }
   }
 
   handleEvaluateClick(event) {
-    console.log('Evaluating');
-    evaluateResults()
+    evaluateResults();
   }
 
   evaluateResults() {
-
+    console.log('Evaluating');
   }
 
   render() {
