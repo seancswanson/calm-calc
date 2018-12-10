@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+  height: 100vh;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  body: 0;
+  height: 100%;
+}
+
+#React {
+  height: 100%;
+
+  .App {
+    height: 100%;
+
+    .gear {
+      position: absolute;
+      top: 80px;
+      right: 20px;
+      background: url(../assets/icons/gear.svg) left top;
+      width: 26px;
+      height: 26px;
+      z-index: 20;
+      cursor: pointer;
+      transition: .5s all ease-out;
+
+      &:hover {
+        transform: rotate(30deg);
+      }
+    }
+  }
+}
+
+.App-grid {
+  display: grid;
+  grid-auto-rows: 60px 1fr;
+  height: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+
+
+
+@import "TopNav.less";
+@import "SideBar.less";
+@import "Calc.less";
