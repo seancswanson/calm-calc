@@ -9,7 +9,8 @@
 }
 
 .DisplayContainer {
-  font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+  font-family: Lucida Console, Lucida Sans Typewriter, monaco,
+    Bitstream Vera Sans Mono, monospace;
   text-align: right;
   font-size: 30px;
   border-bottom: 1px solid #eee;
@@ -30,11 +31,11 @@
   grid-auto-columns: 70px;
   grid-auto-rows: 70px;
   grid-template-areas:
-  "clear toggleNegative percentage divide"
-  "seven eight nine multiply"
-  "four five six subtract"
-  "one two three add"
-  "zero zero decimal evaluate";
+    'clear toggleNegative percentage divide'
+    'seven eight nine multiply'
+    'four five six subtract'
+    'one two three add'
+    'zero zero decimal evaluate';
   grid-row-gap: 15px;
   justify-content: space-between;
 
@@ -42,10 +43,14 @@
     border-radius: 35px;
     display: grid;
     align-items: center;
+    transition: 0.2s border ease;
+    transition: 0.4s box-shadow ease;
+    border: 1px solid #d3d3d3;
+    cursor: pointer;
 
     &:focus {
       outline: none;
-      border: 1px solid black;
+      border: 2px solid black;
     }
   }
 
@@ -102,7 +107,7 @@
   }
 
   .addButton {
-    grid-area: add
+    grid-area: add;
   }
 
   .subtractButton {

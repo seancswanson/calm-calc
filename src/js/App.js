@@ -16,7 +16,7 @@ class App extends Component {
       rainVolume: 1,
       buttonFx: true,
       buttonVolume: 1,
-      showSideBar: true
+      showSideBar: false
     };
 
     this.sideBarRef = React.createRef();

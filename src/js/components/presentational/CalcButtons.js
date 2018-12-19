@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 
 
-const Buttons = ({handleDigitClick, handleOperationClick, handleClearClick, handleEvaluateClick}) => {
+const Buttons = ({handleDigitClick, handleDotClick, handleOperationClick, handleClearClick, handleToggleNegativeClick, handleEvaluateClick}) => {
   return(
     <div className="ButtonsContainer">
 
     <Button label="A/C" value="clear" dataId="clear" handleButtonClick={handleClearClick} />
-    <Button label="+/-" value="toggleNegative" dataId="toggleNegative" handleButtonClick={handleOperationClick} />
+    <Button label="+/-" value="toggleNegative" dataId="toggleNegative" handleButtonClick={handleToggleNegativeClick} />
     <Button label="%" value="%" dataId="percentage" handleButtonClick={handleOperationClick} />
     <Button label="/" value="/" dataId="divide" handleButtonClick={handleOperationClick} />
 
@@ -28,7 +28,7 @@ const Buttons = ({handleDigitClick, handleOperationClick, handleClearClick, hand
     <Button label="+" value="+" dataId="add" handleButtonClick={handleOperationClick} />
 
     <Button label="0" value="0" dataId="zero" handleButtonClick={handleDigitClick} />
-    <Button label="." value="." dataId="decimal" handleButtonClick={handleDigitClick} />
+    <Button label="." value="." dataId="decimal" handleButtonClick={handleDotClick} />
     <Button label="=" value="=" dataId="evaluate" handleButtonClick={handleEvaluateClick} />
     </div>
 )

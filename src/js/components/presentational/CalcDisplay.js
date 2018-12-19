@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Display = ({data}) => {
-  let input = data.map(datum => {
-    return(<span className="input-char">{datum}</span>)
-  })
+const Display = ({displayValue}) => {
+  // let input = data.map((datum, i) => {
+  //   return(<span className="input-char" key={i}>{datum}</span>)
+  // })
   return(
   <div className="DisplayContainer">
-    {input}
+    {displayValue}
   </div>
 )
 };
