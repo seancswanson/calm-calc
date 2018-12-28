@@ -15,6 +15,7 @@
   padding-right: 10px;
   line-height: 70px;
   overflow-x: scroll;
+  overflow-y: hidden;
 
   .input-char {
     vertical-align: baseline;
@@ -39,13 +40,13 @@
   justify-content: space-between;
 
   .Button {
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 35px;
     display: grid;
     align-items: center;
-    transition: 0.2s border ease;
-    transition: 0.4s box-shadow ease;
-    border: 1px solid #d3d3d3;
+    border: 2px solid #d3d3d3;
     cursor: pointer;
+    color: white;
 
     &:focus {
       outline: none;

@@ -6,23 +6,27 @@ function getPastelColor() {
   let h, s, l;
 
   h = Math.random() * 360;
-  s = Math.random() * 70 + 25;
-  l = Math.random() * 10 + 85;
+  s = Math.random() * 70 + 55;
+  l = Math.random() * 10 + 65;
 
   const hslString = `hsl(${h}, ${s}%, ${l}%)`;
   return hslString;
 }
 
 function handleButtonHover(event) {
+  const pastelColor = getPastelColor();
   const btnStyle = event.target.style;
-  btnStyle.border = `1px solid ${getPastelColor()}`;
-  btnStyle.boxShadow = `0 0 20px 3px ${getPastelColor()}`;
+  btnStyle.border = `2px solid ${pastelColor}`;
+  btnStyle.boxShadow = `0 0 2px 1px ${pastelColor}`;
+  btnStyle.color = `${pastelColor}`;
+  btnStyle.transition = `.4s all ease`;
 }
 
 function handleButtonLeave(event) {
   const btnStyle = event.target.style;
-  btnStyle.border = '1px solid #d3d3d3';
+  btnStyle.border = '2px solid #d3d3d3';
   btnStyle.boxShadow = `initial`;
+  btnStyle.color = `white`;
 }
 
 const Button = ({ label, value, dataId, handleButtonClick }) => {

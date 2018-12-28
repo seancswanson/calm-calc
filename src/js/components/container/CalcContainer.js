@@ -4,22 +4,22 @@ import Display from '../presentational/CalcDisplay';
 import Buttons from '../presentational/CalcButtons';
 import Mathjs from 'mathjs-expression-parser';
 
-
-  //----------
-  const CalculatorOperations = {
+//----------
+const CalculatorOperations = {
   '/': (prevValue, nextValue) => prevValue / nextValue,
   '*': (prevValue, nextValue) => prevValue * nextValue,
   '+': (prevValue, nextValue) => prevValue + nextValue,
   '-': (prevValue, nextValue) => prevValue - nextValue,
   '=': (prevValue, nextValue) => nextValue
-  }
+};
 
+//----------
 class CalcContainer extends Component {
+  //----------
   constructor() {
     super();
 
     this.state = {
-      title: 'Calm Calc',
       value: null,
       displayValue: '0',
       operator: null,
@@ -42,13 +42,15 @@ class CalcContainer extends Component {
       this.setState({
         displayValue: String(newDigit),
         waitingForOperand: false
-      })
+      });
     } else {
       this.setState({
-        displayValue: this.state.displayValue === '0' ? String(newDigit) : this.state.displayValue + newDigit
-      })
+        displayValue:
+          this.state.displayValue === '0'
+            ? String(newDigit)
+            : this.state.displayValue + newDigit
+      });
     }
-
   }
 
   //----------
@@ -77,8 +79,11 @@ class CalcContainer extends Component {
         value: inputValue
       });
     } else if (this.state.operator) {
-      const currentValue = this.state.value || 0
-      const newValue = CalculatorOperations[this.state.operator](currentValue, inputValue)
+      const currentValue = this.state.value || 0;
+      const newValue = CalculatorOperations[this.state.operator](
+        currentValue,
+        inputValue
+      );
 
       this.setState({
         value: newValue,
@@ -89,7 +94,7 @@ class CalcContainer extends Component {
     this.setState({
       waitingForOperand: true,
       operator: operator
-    })
+    });
   }
 
   //----------
@@ -121,10 +126,9 @@ class CalcContainer extends Component {
 
   //----------
   render() {
-    const { title, displayValue } = this.state;
+    const { displayValue } = this.state;
     return (
       <div>
-        <pre>{JSON.stringify(this.state)}</pre>
         <div className="CalcContainer">
           <Display displayValue={displayValue} />
           <Buttons

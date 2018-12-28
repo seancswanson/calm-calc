@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import CalcContainer from './components/container/CalcContainer';
 import TopNav from './components/presentational/TopNav';
 import SideBar from './components/container/SideBar';
+import Footer from './components/presentational/Footer';
 require('../style/App.less');
 
 class App extends Component {
@@ -78,6 +79,7 @@ class App extends Component {
         <div className="App-grid">
           <TopNav />
           <CalcContainer />
+          <Footer />
         </div>
         <div className="gear" onClick={this.handleGearClick} />
         {showSideBar ? (
